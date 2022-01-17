@@ -11,17 +11,21 @@ while True:
 	student_data = input("Enter students data ")
 	x = student_data.split()
 	for i in range(len(x)):
-		if i == 0:
-			students_first_name.append(x[i])
-		elif i == 1:
-			students_last_name.append(x[i])
-		elif i == 2:
-			students_age.append(x[i])
-		elif i == 3:
-			students_mark.append(x[i])
+		if int(x[2]) in range(18, 31) and int(x[3]) in range(1, 11):
+			if i == 0:
+				students_first_name.append(x[i])
+			elif i == 1:
+				students_last_name.append(x[i])
+			elif i == 2:
+				students_age.append(x[i])
+			elif i == 3:
+				students_mark.append(x[i])
+			if student_data == "":
+				break
+		elif int(x[2]) not in range(18, 31) or int(x[3]) not in range(1, 11):
+			pass
 	if student_data == "":
 		break
-		
 
 print("\n")
 
